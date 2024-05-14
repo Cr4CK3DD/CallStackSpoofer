@@ -50,28 +50,6 @@ typedef (NTAPI *NtAllocateVirtualMemory_t)(
 	IN ULONG                AllocationType,
 	IN ULONG                Protect);
 
-typedef NTSTATUS(NTAPI* NtCreateProcessEx_t)
-(
-    OUT PHANDLE     ProcessHandle,
-    IN ACCESS_MASK  DesiredAccess,
-    IN POBJECT_ATTRIBUTES ObjectAttributes  OPTIONAL,
-    IN HANDLE   ParentProcess,
-    IN ULONG    Flags,
-    IN HANDLE SectionHandle     OPTIONAL,
-    IN HANDLE DebugPort     OPTIONAL,
-    IN HANDLE ExceptionPort     OPTIONAL,
-    IN BOOLEAN  InJob
-    );
-
-//
-// NtCreateProcessEx flags
-//
-#define PS_REQUEST_BREAKAWAY                     1
-#define PS_NO_DEBUG_INHERIT                     2
-#define PS_INHERIT_HANDLES                      4
-#define PS_UNKNOWN_VALUE                        8
-#define PS_ALL_FLAGS PS_REQUEST_BREAKAWAY |PS_NO_DEBUG_INHERIT |PS_INHERIT_HANDLES | PS_UNKNOWN_VALUE
-
 extern LPVOID           Suppressor(LPVOID a1, LPVOID a2, LPVOID a3, LPVOID a4, PPARAMS params, ...);
 PIMAGE_SECTION_HEADER   GetSection(HMODULE hModule, PCSTR sectionName);
 PVOID                   FindGadget(PVOID mem, SIZE_T mem_size, BYTE* gadget, DWORD gadget_size);
