@@ -8,11 +8,12 @@
 
 - Indirect syscall without stack spoofing technique:
 
-![stack not spoofed](https://github.com/Cr4CK3DD/Suppressor/assets/93877982/219675e2-19df-43b8-a9b2-8d8710105565)
+![stack not spoofed](https://github.com/Cr4CK3DD/Suppressor/assets/93877982/eae7fae4-e50f-40db-908d-45009324c1e5)
+
 
 - Indirect syscall with stack spoofing technique:
 
-![Spoofed stack](https://github.com/Cr4CK3DD/Suppressor/assets/93877982/81ac3bf1-0dba-407b-90c0-74c8fa839e43)
+![Spoofed stack](https://github.com/Cr4CK3DD/Suppressor/assets/93877982/c3fe93d4-3fd9-40e6-b84a-364dc7fe2fde)
 
 
 ## Resources & References:
